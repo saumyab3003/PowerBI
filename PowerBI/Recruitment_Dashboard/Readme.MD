@@ -1,140 +1,389 @@
 # Recruitment Channel Value Analytics Dashboard
- 
+
 ## Overview
- 
+
 This Power BI project analyzes recruitment channel effectiveness across the complete hiring lifecycle, from candidate acquisition and funnel conversion through probation, retention, post-hire performance, and successful-hire economics.
- 
-The objective is to move beyond traditional recruitment metrics such as number of hires and Cost per Hire and answer a more valuable business question:
- 
+
+The analysis goes beyond traditional recruitment metrics such as hiring volume and Cost per Hire to answer a more strategic question:
+
 > **Which recruitment channels deliver sustainable, high-quality hires at a reasonable acquisition cost?**
- 
-The report was developed as part of the ZoomCharts 4U Power BI Recruitment Analytics Challenge and uses interactive ZoomCharts Drill Down visuals for deeper exploration of recruitment performance.
- 
+
+The dashboard was developed for the **ZoomCharts 4U Recruitment Analytics Challenge** and uses interactive ZoomCharts Drill Down visuals to enable deeper exploration of recruitment performance.
+
 ---
- 
-## Dashboard Structure
- 
-The report contains two pages.
- 
-### 1. Recruitment Analytics
- 
-The first page focuses on recruitment acquisition, efficiency, and funnel performance.
- 
-#### Key KPIs
+
+## Business Objective
+
+Recruitment channels can appear effective when evaluated only on initial hiring outcomes.
+
+A channel may:
+
+- Generate a high number of hires
+- Have a reasonable Cost per Hire
+- Deliver candidates quickly
+
+But those metrics alone do not show whether those hires:
+
+- Pass probation
+- Remain with the organization
+- Perform effectively
+- Become successful long-term hires
+
+This dashboard connects **recruitment acquisition metrics with post-hire outcomes** to provide a broader view of recruitment channel value.
+
+---
+
+# Dashboard
+
+The report consists of two analytical pages.
+
+## Page 1: Recruitment Analytics
+
+**Focus:** Recruitment acquisition, cost, efficiency, and candidate conversion.
+
+### Key KPIs
+
 - Recruitment Spend
-- Total Hires
+- Hires
 - Cost per Hire
 - Average Time to Fill
 - Applicant-to-Hire Rate
- 
-#### Analysis
-- Recruitment Spend by Channel
-- Recruitment Spend & Hires Trend
-- 180-Day Successful Hires by Channel
-- Candidate Conversion Funnel
- 
-Users can drill from:
- 
-**Channel Group → Channel → Provider**
- 
-and analyze trends across:
- 
+
+### Analysis
+
+#### Recruitment Spend by Channel
+Compares recruitment investment across channel groups and allows drill-down into individual channels and providers.
+
+#### Recruitment Spend & Hires Trend
+Tracks recruitment investment and hiring activity over time using:
+
 **Year → Quarter → Month**
- 
+
+#### 180-Day Successful Hires by Channel
+Shows how successful hires are distributed across recruitment channels.
+
+#### Candidate Conversion Funnel
+Tracks candidate progression through:
+
+**Applicants → Qualified Applicants → Interviews → Offers → Accepted Offers → Hires**
+
+This helps identify where candidate volume decreases throughout the recruitment process.
+
 ---
- 
-### 2. Channel Value & Hire Quality
- 
-The second page extends the analysis beyond the initial hire to evaluate the quality and sustainability of recruitment outcomes.
- 
-#### Key KPIs
+
+## Page 2: Channel Value & Hire Quality
+
+**Focus:** Post-hire quality and the economics of successful recruitment outcomes.
+
+### Key KPIs
+
 - Probation Pass Rate
 - 180-Day Retention Rate
 - 180-Day Successful Hires
 - Average Performance Score
 - Cost per Successful Hire
- 
-#### Analysis
-- Post-Hire Quality by Channel
-- Channel Cost vs Hire Quality
-- Post-Hire Performance by Channel
-- Successful Hire Economics
- 
-The page compares recruitment channels not only by acquisition cost, but also by their ability to generate employees who pass probation, remain retained, perform effectively, and become successful hires.
- 
+
+### Analysis
+
+#### Post-Hire Quality by Channel
+Compares probation and 180-day retention outcomes across recruitment channels.
+
+#### Channel Cost vs Hire Quality
+Evaluates the relationship between:
+
+- Cost per Successful Hire
+- 180-Day Retention Rate
+
+This helps identify channels that combine lower acquisition cost with stronger post-hire retention.
+
+#### Post-Hire Performance by Channel
+Compares average performance outcomes across recruitment channel groups.
+
+#### Successful Hire Economics
+Compares:
+
+**Cost per Hire vs Cost per Successful Hire**
+
+This provides a quality-adjusted view of recruitment economics and highlights cases where an apparently reasonable acquisition cost becomes significantly higher after post-hire outcomes are considered.
+
 ---
- 
-## Business Questions Addressed
- 
+
+# Analytical Framework
+
+The dashboard follows the recruitment lifecycle beyond the initial hire:
+
+```text
+Applicants
+    ↓
+Qualified Candidates
+    ↓
+Interviews
+    ↓
+Offers
+    ↓
+Accepted Offers
+    ↓
+Hires
+    ↓
+Probation
+    ↓
+180-Day Retention
+    ↓
+Successful Hire
+    ↓
+Post-Hire Performance
+```
+
+This allows recruitment channels to be evaluated across three dimensions:
+
+### 1. Acquisition Efficiency
+How efficiently does a channel convert recruitment investment into hires?
+
+### 2. Hire Quality
+Do employees sourced through the channel pass probation, remain retained, and perform effectively?
+
+### 3. Sustainable Recruitment Value
+What does it actually cost to generate a successful hire rather than simply make a hire?
+
+---
+
+# Business Questions Addressed
+
 The dashboard is designed to answer questions such as:
- 
+
 1. Which recruitment channels receive the highest investment?
-2. How efficiently does recruitment spend translate into hires?
-3. Where does candidate conversion drop across the recruitment funnel?
-4. Which channels produce the highest probation pass rates?
-5. Which channels generate stronger 180-day retention?
-6. How does post-hire performance differ by recruitment source?
-7. Which channels have the lowest Cost per Successful Hire?
-8. Does a low Cost per Hire still represent good value after retention and performance are considered?
-9. Which recruitment channels provide the best balance between cost, volume, and sustainable hire quality?
- 
+2. Which channels generate the greatest hiring volume?
+3. How efficiently does recruitment spend translate into hires?
+4. Where does candidate conversion drop within the recruitment funnel?
+5. Which channels produce stronger probation outcomes?
+6. Which channels deliver stronger 180-day retention?
+7. How does employee performance vary by recruitment source?
+8. Which channels generate the most successful hires?
+9. Which channels have the lowest Cost per Successful Hire?
+10. Does a low Cost per Hire still represent good value after retention and post-hire outcomes are considered?
+
 ---
- 
-## Key Metrics
- 
+
+# Key Measures
+
 | Metric | Purpose |
 |---|---|
+| Applicants | Total candidate volume |
+| Qualified Candidates | Candidates meeting qualification criteria |
+| Interviews | Candidates progressing to interview |
+| Offers | Offers issued |
+| Accepted Offers | Offers accepted |
+| Hires | Completed hires |
 | Recruitment Spend | Total recruitment investment |
-| Cost per Hire | Acquisition efficiency |
-| Avg Time to Fill | Recruitment speed |
+| Cost per Hire | Recruitment cost per completed hire |
+| Average Time to Fill | Recruitment speed |
 | Applicant-to-Hire Rate | Overall funnel conversion |
-| Probation Pass Rate | Early post-hire quality |
-| 180-Day Retention Rate | Medium-term retention |
+| Probation Pass Rate | Early post-hire success |
+| 180-Day Retention Rate | Medium-term employee retention |
 | 180-Day Successful Hires | Sustainable hiring outcome |
-| Avg Performance Score | Post-hire employee performance |
-| Cost per Successful Hire | Quality-adjusted acquisition cost |
- 
+| Average Performance Score | Post-hire performance indicator |
+| Cost per Successful Hire | Quality-adjusted recruitment acquisition cost |
+
 ---
- 
-## Interactive Analysis
- 
-The report includes interactive filtering by:
- 
-- Date
-- Role Family
-- Country
-- Recruitment Channel
- 
-ZoomCharts drill-down functionality enables deeper investigation from high-level recruitment channel groups into individual channels and providers.
- 
-Cross-filtering allows users to move from overall recruitment performance into specific segments and investigate both acquisition efficiency and post-hire outcomes.
- 
+
+# Interactive Features
+
+The dashboard supports filtering by:
+
+- **Date**
+- **Role Family**
+- **Country**
+- **Recruitment Channel**
+
+ZoomCharts visuals provide interactive drill-down paths including:
+
+```text
+Channel Group
+    ↓
+Channel
+    ↓
+Provider
+```
+
+and time-based exploration through:
+
+```text
+Year
+  ↓
+Quarter
+  ↓
+Month
+```
+
+Cross-filtering enables users to investigate specific segments while retaining the overall recruitment and post-hire context.
+
 ---
- 
-## Analytical Approach
- 
-Rather than defining the "best" recruitment channel solely by hiring volume or Cost per Hire, this analysis evaluates channel value across multiple stages:
- 
-**Applicants → Qualified Candidates → Interviews → Offers → Accepted Offers → Hires → Probation → 180-Day Retention → Successful Hire → Performance**
- 
-This provides a more complete view of recruitment ROI.
- 
-A channel that appears inexpensive at the point of hire may become significantly more expensive when unsuccessful or non-retained hires are considered. For this reason, **Cost per Successful Hire** is used alongside traditional Cost per Hire to provide a quality-adjusted view of recruitment economics.
- 
+
+# Why Cost per Successful Hire Matters
+
+Traditional recruitment reporting often stops at:
+
+```text
+Recruitment Spend
+        ÷
+      Hires
+        =
+   Cost per Hire
+```
+
+This project extends the analysis to:
+
+```text
+Recruitment Spend
+        ÷
+180-Day Successful Hires
+        =
+Cost per Successful Hire
+```
+
+The distinction matters because a recruitment source that looks cost-effective based solely on initial hires may look very different after probation, retention, and successful-hire outcomes are considered.
+
+This provides a more complete view of recruitment channel economics.
+
 ---
- 
-## Tools & Technologies
- 
-- Microsoft Power BI Desktop
-- DAX
-- Data Modeling
-- ZoomCharts Drill Down Visuals
-- Interactive Slicers
-- Drill-down Hierarchies
+
+# Tools & Technologies
+
+- **Microsoft Power BI Desktop**
+- **DAX**
+- **Power BI Data Modeling**
+- **ZoomCharts Drill Down Visuals**
+- Drill-down hierarchies
+- Interactive slicers
 - Cross-filtering
-- Recruitment Funnel Analysis
-- Cost & Post-Hire Quality Analytics
- 
+- Recruitment funnel analysis
+- Cost and efficiency analysis
+- Post-hire quality analytics
+
 ---
- 
-## Repository Contents
+
+# Power BI Measures
+
+The report includes measures covering the full recruitment and post-hire lifecycle, including:
+
+### Recruitment Funnel
+
+```text
+Applicants
+Qualified Candidates
+Interviews
+Offers
+Accepted Offers
+Hires
+```
+
+### Recruitment Efficiency
+
+```text
+Recruitment Spend
+Cost per Hire
+Average Time to Fill
+Applicant-to-Hire Rate
+Qualification Rate
+Interview Rate
+Offer Rate
+Offer Acceptance Rate
+Hire Conversion Rate
+```
+
+### Post-Hire Quality
+
+```text
+90-Day Eligible Hires
+Passed Probation Hires
+Probation Pass Rate
+
+180-Day Eligible Hires
+180-Day Retained Hires
+180-Day Retention Rate
+180-Day Successful Hires
+
+Performance Rated Hires
+Average Performance Score
+Cost per Successful Hire
+```
+
+---
+
+# Dashboard Preview
+
+## Recruitment Analytics
+
+![Recruitment Analytics Dashboard](screenshots/recruitment-analytics-overview.png)
+
+The overview page combines recruitment spend, hiring efficiency, channel analysis, recruitment trends, successful hires, and the complete candidate conversion funnel.
+
+---
+
+## Channel Value & Hire Quality
+
+![Channel Value and Hire Quality Dashboard](screenshots/channel-value-hire-quality.png)
+
+The second page evaluates recruitment channels using probation results, retention, employee performance, successful hires, and quality-adjusted recruitment cost.
+
+---
+
+# Repository Structure
+
+```text
+Recruitment-Channel-Value-Analytics/
+│
+├── Recruitment Dashboard_ZoomCharts.pbix
+├── README.md
+│
+└── screenshots/
+    ├── recruitment-analytics-overview.png
+    └── channel-value-hire-quality.png
+```
+
+---
+
+# Project Highlights
+
+- End-to-end recruitment lifecycle analysis
+- Candidate conversion funnel analysis
+- Recruitment channel cost comparison
+- Cost per Hire and Cost per Successful Hire analysis
+- Probation outcome analysis
+- 180-day retention analysis
+- Post-hire performance analysis
+- Interactive ZoomCharts drill-down functionality
+- Channel Group → Channel → Provider exploration
+- Year → Quarter → Month time analysis
+- Interactive filtering across Date, Role Family, Country, and Channel
+- Two-page executive-focused dashboard design
+
+---
+
+# Key Takeaway
+
+Recruitment channel effectiveness should not be evaluated only by **how many people are hired** or **how cheaply those hires are acquired**.
+
+A more complete assessment considers what happens after hiring.
+
+By connecting acquisition cost with probation, retention, successful-hire outcomes, and performance, this dashboard provides a framework for evaluating:
+
+> **Which recruitment channels generate sustainable hiring value, not just hiring volume?**
+
+---
+
+# Challenge
+
+Created as a submission for the **ZoomCharts 4U Recruitment Analytics Power BI Challenge**.
+
+The project uses multiple ZoomCharts Drill Down visuals to provide interactive exploration while maintaining a concise two-page analytical experience.
+
+---
+
+# Author
+
+**Saumya Sangamkar**
+
+Power BI | Data Analytics | AI & Automation
+
+[Connect with me on LinkedIn](https://www.linkedin.com/in/saumya-bartaria-3003/)
